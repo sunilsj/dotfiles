@@ -62,6 +62,6 @@ prompt_info() {
 
 tmuxsessions=`tmux list-sessions | wc -l`
 if [ $tmuxsessions -ne 0 ]; then
-  dotfiles/tmux/windows.sh
+  /Users/sunil/dotfiles/tmux/windows.sh
 fi
 
