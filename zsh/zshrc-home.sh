@@ -11,9 +11,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 fpath=(~/zsh-completions/src $fpath)
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/develop/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/develop/zsh-completions
+source ~/develop/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Override highlighter colors
 ZSH_HIGHLIGHT_STYLES[default]=none
