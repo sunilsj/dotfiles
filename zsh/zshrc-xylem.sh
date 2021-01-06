@@ -1,9 +1,9 @@
 export CLICOLOR=1
 export LSCOLORS=DxFxBxDxCxegedabagacad
+PRMPT="%F{yellow}%n@%F{magenta}%m%F{green}%~%f $ "
 
 precmd() {
-    PROMPT="%F{yellow}%n@%F{magenta}%m%F{green}%~%f $ "
-    RPROMPT=`prompt_info`
+    PROMPT=`prompt_info`
 }
 
 # Enable highlighters
@@ -49,14 +49,14 @@ prompt_info() {
 			aheadmark='++++ '
 		fi
                 if [ "$all" = "0" ]; then
-                        echo " %F{yellow}($aheadmark$branch)%f"
+                        echo "\n%F{yellow}($aheadmark$branch)%f\n$PRMPT"
                 elif [ "$all" = "$tracked" ]; then
-                        echo " %F{yellow}($aheadmark$branch+)%f"
+                        echo "\n%F{yellow}($aheadmark$branch+)%f\n$PRMPT"
                 else
-                        echo " %F{yellow}($aheadmark$branch*)%f"
+                        echo "\n%F{yellow}($aheadmark$branch*)%f\n$PRMPT"
                 fi
 	else
-		echo ""
+                echo "$PRMPT"
         fi
 }
 
