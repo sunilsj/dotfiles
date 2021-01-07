@@ -2,3 +2,4 @@
 *.swp
 tmux/plugins
 tmux/plugins/*
+plugins/zsh-autosuggestions/**

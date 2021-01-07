@@ -1,5 +1,6 @@
 export CLICOLOR=1
 export LSCOLORS=DxFxBxDxCxegedabagacad
+export PATH=$PATH:/opt/homebrew/bin
 PRMPT="%F{yellow}%n@%F{magenta}%m%F{green}%~%f $ "
 
 precmd() {
@@ -11,9 +12,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 fpath=(~/zsh-completions/src $fpath)
 
-source ~/.terminal-config/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-source ~/.terminal-config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/develop/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/develop/zsh-completions
+source ~/develop/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Override highlighter colors
 ZSH_HIGHLIGHT_STYLES[default]=none
@@ -56,9 +57,8 @@ prompt_info() {
                         echo "\n%F{yellow}($aheadmark$branch*)%f\n$PRMPT"
                 fi
 	else
-                echo "$PRMPT"
+		echo "$PRMPT"
         fi
 }
 
-alias kk=kubectl
 
