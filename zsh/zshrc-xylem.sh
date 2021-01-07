@@ -11,9 +11,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 fpath=(~/zsh-completions/src $fpath)
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.terminal-config/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.terminal-config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Override highlighter colors
 ZSH_HIGHLIGHT_STYLES[default]=none
@@ -60,4 +60,5 @@ prompt_info() {
         fi
 }
 
+alias kk=kubectl
 
