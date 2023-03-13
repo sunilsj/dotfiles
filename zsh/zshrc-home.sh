@@ -50,11 +50,11 @@ prompt_info() {
 			aheadmark='++++ '
 		fi
                 if [ "$all" = "0" ]; then
-                        echo "\n%F{yellow}($aheadmark$branch)%f\n$PRMPT"
+                        echo "\n%F{189}($aheadmark$branch)%f\n$PRMPT"
                 elif [ "$all" = "$tracked" ]; then
-                        echo "\n%F{yellow}($aheadmark$branch+)%f\n$PRMPT"
+                        echo "\n%F{blue}($aheadmark$branch+)%f\n$PRMPT"
                 else
-                        echo "\n%F{yellow}($aheadmark$branch*)%f\n$PRMPT"
+                        echo "\n%F{blue}($aheadmark$branch*)%f\n$PRMPT"
                 fi
 	else
 		echo "$PRMPT"
